@@ -1,0 +1,123 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+:root{
+    --hlg-clr: #cf8e80;
+}
+
+.head-logo{
+    padding: 2em;
+}
+
+.hero-img{
+    content: url(./images/hero-mobile.jpg);
+    width: 100%;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content{
+    text-align: center;
+    padding: 1em;
+
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
+.hero-content h2{
+    font-size: 2rem;
+    line-height: 1rem;
+    letter-spacing: .5rem;
+}
+
+.hero-content h2:first-of-type{
+    color: var(--hlg-clr);
+    font-weight: 300;
+}
+.hero-content p{
+  font-weight: 500;
+  color: var(--hlg-clr);
+  letter-spacing: .05rem;
+}
+
+.hero-content form > input{
+    width: 100%;
+    padding: 1em;
+    border-radius: 2rem;
+    background-color: inherit;
+    border: 1px solid var(--hlg-clr);
+}
+
+.hero-content form > input::placeholder{
+    color: var(--hlg-clr);
+    letter-spacing: .09rem;
+}
+
+
+
+.hero-content form > button {
+    padding: 1em 2em;
+    border-radius: 2rem;
+    color: white;
+    background-color: #f7a9a8;
+    border: 1px solid var(--hlg-clr);
+    position: absolute;
+    right: 1em;
+}
+
+.hero-content form > button:hover{
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+
+    body{
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    main{
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-img{
+        content: url(./images/hero-desktop.jpg);
+        width: 45%;
+        height: 100%;
+        align-self: center;
+    }
+
+    .hero-content{
+        background-image: none;
+        padding: 0 5em;
+    }
+
+    .hero-content h2{
+        font-size: 3.5rem;
+    }
+
+    .hero-content form > input{
+        width: 70%;
+    }
+
+    .hero-content form > button{
+        position: relative;
+        left: -3rem;
+    }
+}
